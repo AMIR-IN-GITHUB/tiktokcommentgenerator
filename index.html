@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Comment Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>TikTok Comment Generator</h1>
+        <p class="subtitle">Create custom TikTok comments with profile</p>
+        
+        <div class="generator-box">
+            <div class="input-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Enter username" value="@username">
+            </div>
+            
+            <div class="input-group">
+                <label for="comment-text">Comment:</label>
+                <textarea id="comment-text" rows="3" placeholder="Type your comment here...">This is a sample TikTok comment! 😊</textarea>
+            </div>
+            
+            <div class="input-group">
+                <label>Profile Picture:</label>
+                <div class="profile-picture-upload">
+                    <div class="profile-preview" id="profile-preview">
+                        <i class="fas fa-user-circle default-avatar"></i>
+                    </div>
+                    <input type="file" id="profile-upload" accept="image/*">
+                    <label for="profile-upload" class="upload-btn">Choose Image</label>
+                </div>
+            </div>
+            
+            <div class="preview-container">
+                <h3>Preview:</h3>
+                <div class="tiktok-comment" id="comment-preview">
+                    <div class="comment-avatar" id="preview-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="comment-content">
+                        <div class="comment-username" id="preview-username">@username</div>
+                        <div class="comment-text" id="preview-text">This is a sample TikTok comment! 😊</div>
+                        <div class="comment-actions">
+                            <span class="action"><i class="far fa-heart"></i> 0</span>
+                            <span class="action"><i class="far fa-comment-dots"></i> Reply</span>
+                            <span class="time">Just now</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button id="download-btn">
+                <i class="fas fa-download"></i> Download Comment
+            </button>
+        </div>
+    </div>
+    
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
