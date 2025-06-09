@@ -170,10 +170,18 @@ textarea {
     justify-content: center;
     flex-shrink: 0;
     color: #c4c4c4;
+    overflow: hidden; /* Ensures content is clipped to the avatar's bounds */
 }
 
 .comment-avatar i {
     font-size: 1.8rem;
+}
+
+.comment-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the avatar area, maintaining aspect ratio */
+    /* The script.js already applies border-radius: 50% to the img itself, which is good. */
 }
 
 .comment-content {
